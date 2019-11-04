@@ -1,0 +1,26 @@
+.List {
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.List-Item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 0;
+}
+
+.List-Item.collection-item {
+  padding-right: 10px;
+}
+
+.List-Item_done > .List-ItemText {
+  opacity: 0.5;
+}
+
+.List-ItemText {
+  width: 100%;
+}
+
+.List-ItemActions {
+  margin-left: 16px;
+}

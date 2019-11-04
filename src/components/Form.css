@@ -1,0 +1,15 @@
+.Form {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.Form > .input-field {
+  width: 100%;
+}
+
+.Form > .btn-floating {
+ flex-shrink: 0;
+  margin-left: 16px;
+}
