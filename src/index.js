@@ -7,6 +7,6 @@ import './styles/base.css'
 import App from './components/App'
 import * as serviceWorker from './utils/serviceWorker'
 
-ReactDOM.render(<App />, document.getElementById('root') as HTMLElement)
+ReactDOM.render(<App />, document.getElementById('root'))
 
 serviceWorker.unregister()

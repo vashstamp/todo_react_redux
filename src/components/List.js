@@ -5,17 +5,11 @@ import cn from 'classnames'
 import {checkTodo, deleteTodo} from '../redux/todos'
 import './List.css'
 
-interface ListProps {
-  todos: any
-  checkTodo: any
-  deleteTodo: any
-}
-
-function List({todos, checkTodo, deleteTodo}: ListProps) {
+function List({todos, checkTodo, deleteTodo}) {
   return (
     <ul className="List collection z-depth-5">
       {todos.length ? (
-        todos.map((item: any) => (
+        todos.map(item => (
           <li key={item.id} className={cn('List-Item collection-item', {'List-Item_done': item.isDone})}>
             <p className="List-ItemText">{item.text}</p>
             <div className="List-ItemActions">
@@ -36,8 +30,8 @@ function List({todos, checkTodo, deleteTodo}: ListProps) {
   )
 }
 
-const mapStateToProps = (todos: any) => ({
-  todos: todos.sort((a: any, b: any): number => (a.isDone === b.isDone ? 0 : a.isDone && !b.isDone ? 1 : -1)),
+const mapStateToProps = todos => ({
+  todos: todos.sort((a, b) => (a.isDone === b.isDone ? 0 : a.isDone && !b.isDone ? 1 : -1)),
 })
 
 const mapDispatchToProps = {
