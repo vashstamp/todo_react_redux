@@ -28,8 +28,6 @@ class Form extends Component {
   handleValueChange = e => this.setState({value: e.target.value})
 
   render() {
-    const obj = {test: 1}
-    console.log('obj', obj)
     const {value} = this.state
     return (
       <form noValidate className="Form" onSubmit={this.handleSubmit}>
